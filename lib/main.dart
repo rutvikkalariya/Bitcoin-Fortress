@@ -88,15 +88,39 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image.asset(
-              'assets/images/Splash.jpg',
-              fit: BoxFit.fill,
-              height: MediaQuery.of(context).size.height,
+            Container(
+              width: double.infinity,
+              child: Image.asset(
+                'assets/images/Splash.jpg',
+                fit: BoxFit.fill,
+                height: MediaQuery.of(context).size.height,
+              ),
             ),
-            Image.asset(
-              'assets/images/bitcoin code logo.png',
-              width: MediaQuery.of(context).size.width * .3,
+            // Image.asset(
+            //   'assets/images/Splash.jpg',
+            //   fit: BoxFit.fill,
+            //   height: MediaQuery.of(context).size.height,
+            // ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/bitcoin fortress logo.png',
+                  width: MediaQuery.of(context).size.width * .3,
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Image.asset(
+                  'assets/images/bitcoin fortress logo name.png',
+                  width: MediaQuery.of(context).size.width * .5,
+                ),
+              ],
             )
+            // Image.asset(
+            //   'assets/images/bitcoin fortress logo.png',
+            //   width: MediaQuery.of(context).size.width * .3,
+            // )
           ],
         ));
   }

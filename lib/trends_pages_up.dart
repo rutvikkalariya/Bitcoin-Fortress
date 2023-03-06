@@ -1,9 +1,7 @@
 // ignore_for_file: import_of_legacy_library_into_null_safe
 
 import 'dart:convert';
-import 'package:bitcoinfortressapp/portfolios_page_up.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,14 +9,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-
 import 'dashboard_helper.dart';
 import 'localization/app_localizations.dart';
 import 'models/Bitcoin.dart';
 import 'models/PortfolioBitcoin.dart';
-
 import 'package:collection/collection.dart';
-
 import 'util/color_util.dart'; // You have to add this manually, for some reason it cannot be added automatically
 
 class TrendPage extends StatefulWidget {
@@ -470,7 +465,7 @@ class _TrendPageState extends State<TrendPage> {
                     ),
                     SizedBox(height: 30),
                     Container(
-                      height: MediaQuery.of(context).size.height / 3.9,
+                      height: MediaQuery.of(context).size.height / 3.8,
                       width: MediaQuery.of(context).size.width / 0.5,
                       // width: 240,
                       margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -486,7 +481,7 @@ class _TrendPageState extends State<TrendPage> {
                         child: Column(
                           children: [
                             Container(
-                              height: MediaQuery.of(context).size.height / 10,
+                              height: MediaQuery.of(context).size.height / 9.5,
                               width: MediaQuery.of(context).size.width / 1.3,
                               // width: 240,
                               // margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -536,35 +531,13 @@ class _TrendPageState extends State<TrendPage> {
                                         bitcoin.rate!.toStringAsFixed(2),
                                         style: GoogleFonts.poppins(
                                             textStyle: TextStyle(
-                                          fontSize: 21,
+                                          fontSize: 20,
                                           fontWeight: FontWeight.w700,
                                           color: getColorFromHex("#4A41F4"),
                                         )),
                                       ),
                                     ],
                                   ),
-                                  // Container(
-                                  //   height:
-                                  //       MediaQuery.of(context).size.height / 17,
-                                  //   width:
-                                  //       MediaQuery.of(context).size.width / 8,
-                                  //   // width: 50,
-                                  //   // height: 20,
-                                  //   margin: EdgeInsets.fromLTRB(70, 5, 0, 5),
-                                  //   decoration: BoxDecoration(
-                                  //     boxShadow: kElevationToShadow[0],
-                                  //     border: Border.all(
-                                  //         color: getColorFromHex("#8FD1FE")),
-                                  //     borderRadius: BorderRadius.circular(10),
-                                  //     color: getColorFromHex("#E8F1FF"),
-                                  //   ),
-                                  //   child: IconButton(
-                                  //       onPressed: () {},
-                                  //       icon: Icon(
-                                  //         Icons.arrow_drop_down_outlined,
-                                  //         size: 28,
-                                  //       )),
-                                  // ),
                                 ],
                               ),
                             ),

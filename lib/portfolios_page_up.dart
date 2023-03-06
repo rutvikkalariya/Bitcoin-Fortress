@@ -1,12 +1,8 @@
 import 'dart:convert';
 
-import 'package:bitcoinfortressapp/trends_pages_up.dart';
-import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/services.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -126,7 +122,7 @@ class _PortfolioPageState extends State<PortfolioPage>
             ),
           ),
           Container(
-            height: MediaQuery.of(context).size.height / 8,
+            height: MediaQuery.of(context).size.height / 7.5,
             width: MediaQuery.of(context).size.width / 0.5,
             // width: 240,
             margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -139,26 +135,6 @@ class _PortfolioPageState extends State<PortfolioPage>
             ),
             child: Row(
               children: [
-                // Container(
-                //   height: MediaQuery.of(context).size.height / 12,
-                //   width: MediaQuery.of(context).size.width / 6,
-                //   // width: 240,
-                //   margin: EdgeInsets.fromLTRB(5, 5, 0, 5),
-                //   decoration: BoxDecoration(
-                //     boxShadow: kElevationToShadow[0],
-                //     border: Border.all(color: getColorFromHex("#8FD1FE")),
-                //     borderRadius: BorderRadius.circular(10),
-                //     color: getColorFromHex("#E8F1FF"),
-                //   ),
-                //   child: Center(
-                //       child: IconButton(
-                //           onPressed: () {},
-                //           icon: Icon(
-                //             Icons.add,
-                //             size: 30,
-                //           ))),
-                // ),
-                // SizedBox(width: 10),
                 Expanded(
                   child: items != null &&
                           items.length > 0 &&
@@ -249,95 +225,73 @@ class _PortfolioPageState extends State<PortfolioPage>
               textAlign: TextAlign.left,
             ),
           ),
-          Flexible(
-            child: myDataList != null && myDataList.length > 0
-                ? Container(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: GridView.builder(
-                        itemCount: myDataList.length,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          crossAxisSpacing: 20,
-                          mainAxisSpacing: 20,
-                        ),
-                        itemBuilder: (BuildContext context, int index) {
+          myDataList != null && myDataList.length > 0
+              ? Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 5),
+                    child: GridView.count(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 5,
+                        mainAxisSpacing: 5,
+                        children: List.generate(myDataList.length, (index) {
                           return InkWell(
                             onTap: () {
                               callCurrencyDetails(myDataList[index].name);
                             },
                             child: Container(
-                              // height: MediaQuery.of(context).size.height / 14,
-                              // width: MediaQuery.of(context).size.width / 6,
-                              // // width: 240,
-                              // margin: EdgeInsets.fromLTRB(10, 5, 20, 5),
-                              decoration: BoxDecoration(
-                                boxShadow: kElevationToShadow[0],
-                                // border: Border.all(color: getColorFromHex("#8FD1FE")),
-                                borderRadius: BorderRadius.circular(10),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                  //set border radius more than 50% of height and width to make circle
+                                ),
                                 color: getColorFromHex("#CEEBFF"),
-                              ),
-                              child: Center(
                                 child: Column(
                                   children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 10, top: 30),
-                                      child: Row(
+                                    SizedBox(height: 30),
+                                    ListTile(
+                                      dense: true,
+                                      // contentPadding:
+                                      //     EdgeInsets.only(left: 10, right: 10),
+                                      leading: InkWell(
+                                        onTap: () {
+                                          if (myDataList.isNotEmpty) {
+                                            showPortfolioDialog(
+                                                myDataList[index]);
+                                          }
+                                        },
+                                        child: FadeInImage(
+                                          height: 45,
+                                          placeholder: AssetImage(
+                                              'assets/images/plusoval.png'),
+                                          image: NetworkImage(
+                                              "$ApiUrl/Bitcoin/resources/icons/${myDataList[index].name!.toLowerCase()}.png"),
+                                        ),
+                                      ),
+                                      title: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          InkWell(
-                                            onTap: () {
-                                              if (myDataList.isNotEmpty) {
-                                                showPortfolioDialog(
-                                                    myDataList[index]);
-                                              }
-                                            },
-                                            child: Flexible(
-                                              child: Container(
-                                                height: 45,
-                                                margin: EdgeInsets.fromLTRB(
-                                                    5, 0, 0, 0),
-                                                child: FadeInImage(
-                                                  placeholder: AssetImage(
-                                                      'assets/images/plusoval.png'),
-                                                  image: NetworkImage(
-                                                      "$ApiUrl/Bitcoin/resources/icons/${myDataList[index].name!.toLowerCase()}.png"),
-                                                ),
-                                              ),
-                                            ),
+                                          Text(
+                                            '${myDataList[index].name}',
+                                            style: GoogleFonts.poppins(
+                                                textStyle: TextStyle(
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 19,
+                                              color: getColorFromHex("#4A41F4"),
+                                            )),
                                           ),
-                                          SizedBox(width: 10),
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                '${myDataList[index].name}',
-                                                style: GoogleFonts.poppins(
-                                                    textStyle: TextStyle(
-                                                  fontWeight: FontWeight.w500,
-                                                  fontSize: 19,
-                                                  color: getColorFromHex(
-                                                      "#4A41F4"),
-                                                )),
-                                              ),
-                                              Text(
-                                                '${double.parse(myDataList[index].rate!.toStringAsFixed(2))}',
-                                                style: GoogleFonts.poppins(
-                                                    textStyle: TextStyle(
-                                                  fontWeight: FontWeight.w500,
-                                                  fontSize: 16,
-                                                  color: getColorFromHex(
-                                                      "#4A41F4"),
-                                                )),
-                                              ),
-                                            ],
+                                          Text(
+                                            '${double.parse(myDataList[index].rate!.toStringAsFixed(2))}',
+                                            style: GoogleFonts.poppins(
+                                                textStyle: TextStyle(
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 16,
+                                              color: getColorFromHex("#4A41F4"),
+                                            )),
                                           ),
                                         ],
                                       ),
                                     ),
-                                    SizedBox(height: 10),
                                     Row(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -378,24 +332,22 @@ class _PortfolioPageState extends State<PortfolioPage>
                               ),
                             ),
                           );
-                        },
-                      ),
-                    ),
-                  )
-                : Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          AppLocalizations.of(context)!
-                              .translate('no_coins_added')!,
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      ],
-                    ),
+                        })),
                   ),
-          ),
+                )
+              : Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        AppLocalizations.of(context)!
+                            .translate('no_coins_added')!,
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
+                ),
         ],
       ),
     );
@@ -469,7 +421,7 @@ class _PortfolioPageState extends State<PortfolioPage>
                     ),
                     SizedBox(height: 30),
                     Container(
-                      height: MediaQuery.of(context).size.height / 3.9,
+                      height: MediaQuery.of(context).size.height / 3.7,
                       width: MediaQuery.of(context).size.width / 0.5,
                       // width: 240,
                       margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
@@ -485,7 +437,7 @@ class _PortfolioPageState extends State<PortfolioPage>
                         child: Column(
                           children: [
                             Container(
-                              height: MediaQuery.of(context).size.height / 10,
+                              height: MediaQuery.of(context).size.height / 9.3,
                               width: MediaQuery.of(context).size.width / 1.3,
                               // width: 240,
                               // margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -542,28 +494,6 @@ class _PortfolioPageState extends State<PortfolioPage>
                                       ),
                                     ],
                                   ),
-                                  // Container(
-                                  //   height:
-                                  //       MediaQuery.of(context).size.height / 17,
-                                  //   width:
-                                  //       MediaQuery.of(context).size.width / 8,
-                                  //   // width: 50,
-                                  //   // height: 20,
-                                  //   margin: EdgeInsets.fromLTRB(70, 5, 0, 5),
-                                  //   decoration: BoxDecoration(
-                                  //     boxShadow: kElevationToShadow[0],
-                                  //     border: Border.all(
-                                  //         color: getColorFromHex("#8FD1FE")),
-                                  //     borderRadius: BorderRadius.circular(10),
-                                  //     color: getColorFromHex("#E8F1FF"),
-                                  //   ),
-                                  //   child: IconButton(
-                                  //       onPressed: () {},
-                                  //       icon: Icon(
-                                  //         Icons.arrow_drop_down_outlined,
-                                  //         size: 28,
-                                  //       )),
-                                  // ),
                                 ],
                               ),
                             ),
@@ -689,8 +619,6 @@ class _PortfolioPageState extends State<PortfolioPage>
       });
 
       Navigator.pushNamedAndRemoveUntil(context, '/homePage', (r) => false);
-      // Navigator.push(
-      //     context, MaterialPageRoute(builder: (context) => PortfolioPage()));
     } else {}
   }
 

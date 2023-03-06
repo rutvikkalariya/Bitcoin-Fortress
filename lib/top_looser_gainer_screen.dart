@@ -229,8 +229,6 @@ class TopLooserGainerState extends State<TopLooserAndGainer> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Container(
-                                            margin:
-                                                EdgeInsets.fromLTRB(0, 7, 0, 0),
                                             child: Text(
                                               '${list[i].name}',
                                               style: GoogleFonts.poppins(
@@ -263,7 +261,7 @@ class TopLooserGainerState extends State<TopLooserAndGainer> {
                                     child: Container(
                                       width:
                                           MediaQuery.of(context).size.width / 4,
-                                      height: 50,
+                                      height: 30,
                                       child: new charts.LineChart(
                                         _createSampleData(list[i].historyRate,
                                             double.parse(list[i].diffRate!)),
@@ -439,8 +437,6 @@ class TopLooserGainerState extends State<TopLooserAndGainer> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Container(
-                                            margin:
-                                                EdgeInsets.fromLTRB(0, 7, 0, 0),
                                             child: Text(
                                               '${list[i].name}',
                                               style: GoogleFonts.poppins(
@@ -473,7 +469,7 @@ class TopLooserGainerState extends State<TopLooserAndGainer> {
                                     child: Container(
                                       width:
                                           MediaQuery.of(context).size.width / 4,
-                                      height: 50,
+                                      height: 30,
                                       child: new charts.LineChart(
                                         _createSampleData(list[i].historyRate,
                                             double.parse(list[i].diffRate!)),

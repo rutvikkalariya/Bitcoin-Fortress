@@ -21,7 +21,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Future<SharedPreferences> _sprefs = SharedPreferences.getInstance();
   int _selectedIndex = 0;
-  String _lable = '';
+  String _lable = 'home';
   SharedPreferences? sharedPreferences;
   final PageStorageBucket bucket = PageStorageBucket();
   String? languageCodeSaved;
@@ -175,9 +175,9 @@ class _HomePageState extends State<HomePage> {
                 "assets/images/translation.png",
                 height: 25,
                 width: 25,
-                color: getColorFromHex("#451873"),
+                color: Colors.black,
               ),
-              margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
+              margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
             ),
             onTap: () {
               showDialog(
@@ -250,42 +250,9 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: PageStorage(
-        // child: _widgetOptions.elementAt(_selectedIndex),
         child: selectedWidget(),
         bucket: bucket,
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   backgroundColor: getColorFromHex("#181A1B"),
-      //   onPressed: () {
-      //     setState(() {
-      //       _onItemTapped(2);
-      //     });
-      //   },
-      //   mini: false,
-      //   child: Container(
-      //     height: 45,
-      //     width: 60,
-      //     padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-      //     child: Image.asset(
-      //       "assets/images/home.png",
-      //       height: 30,
-      //       width: 30,
-      //       color: Colors.white,
-      //     ),
-      //     decoration: BoxDecoration(
-      //         shape: BoxShape.circle,
-      //         gradient: LinearGradient(
-      //           begin: Alignment.topRight,
-      //           end: Alignment.bottomLeft,
-      //           colors: [
-      //             getColorFromHex("#4AC7F2"),
-      //             getColorFromHex("#3532E0"),
-      //             getColorFromHex("#3EE5EF"),
-      //           ],
-      //         )),
-      //   ), //icon inside button
-      // ),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         //bottom navigation bar on scaffold
         color: Colors.white,
