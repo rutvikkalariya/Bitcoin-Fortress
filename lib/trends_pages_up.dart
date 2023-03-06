@@ -682,13 +682,15 @@ class _TrendPageState extends State<TrendPage> {
       sharedPreferences = await SharedPreferences.getInstance();
       setState(() {
         sharedPreferences!.setString("currencyName", bitcoin.name ?? '');
-        sharedPreferences!.setInt("index", 4);
+        sharedPreferences!.setInt("index", 2);
         sharedPreferences!.setString("title",
             AppLocalizations.of(context)!.translate('portfolio').toString());
         sharedPreferences!.commit();
       });
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => PortfolioPage()));
+
+      Navigator.pushNamedAndRemoveUntil(context, '/homePage', (r) => false);
+      // Navigator.push(
+      //     context, MaterialPageRoute(builder: (context) => PortfolioPage()));
     } else {}
   }
 }

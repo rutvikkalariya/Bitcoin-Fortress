@@ -734,7 +734,6 @@ class _HomePageRealState extends State<HomePageReal> {
                     padding: getPadding(left: 50, right: 50, top: 200),
                     child: Text(
                       AppLocalizations.of(context)!.translate("newhome30")!,
-                      overflow: TextOverflow.ellipsis,
                       softWrap: true,
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -977,76 +976,212 @@ class _HomePageRealState extends State<HomePageReal> {
                   ),
                 ),
                 SizedBox(height: 30),
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Align(
-                          child: Text(
-                            // "What is Bitcoin?",
-                            AppLocalizations.of(context)!
-                                .translate("newhome39")!,
-                            // overflow: TextOverflow.ellipsis,
-                            softWrap: true,
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              color: getColorFromHex("#020248"),
-                              fontSize: getFontSize(
-                                28,
-                              ),
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      ExpansionTile(
+                        title: Text(
+                          AppLocalizations.of(context)!.translate("newhome39")!,
+                          softWrap: true,
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                            color: getColorFromHex("#020248"),
+                            fontSize: getFontSize(
+                              28,
                             ),
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
-                        Align(
-                          child: Text(
-                            "-",
-                            // AppLocalizations.of(context)!.translate("newhome25")!,
-                            // overflow: TextOverflow.ellipsis,
-                            softWrap: true,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: getColorFromHex("#020248"),
-                              fontSize: getFontSize(
-                                40,
+                        children: [
+                          Container(
+                            // color: Colors.black12,
+                            padding: EdgeInsets.all(20),
+                            width: double.infinity,
+                            child: Text(
+                              // "The most well-known and widely-used altcoin is bitcoin. Even if technology isn't your thing, you've undoubtedly heard of the company.",
+                              AppLocalizations.of(context)!
+                                  .translate("newhome40")!,
+                              // overflow: TextOverflow.ellipsis,
+                              softWrap: true,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: getFontSize(
+                                  19,
+                                ),
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
                               ),
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
                             ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Align(
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 50, right: 50, top: 10),
-                    child: Text(
-                      // "The most well-known and widely-used altcoin is bitcoin. Even if technology isn't your thing, you've undoubtedly heard of the company.",
-                      AppLocalizations.of(context)!.translate("newhome40")!,
-                      // overflow: TextOverflow.ellipsis,
-                      softWrap: true,
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: getFontSize(
-                          19,
-                        ),
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
+                          )
+                        ],
                       ),
-                    ),
+                      SizedBox(height: 20),
+                      ExpansionTile(
+                        title: Text(
+                          AppLocalizations.of(context)!.translate("newhome41")!,
+                          softWrap: true,
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                            color: getColorFromHex("#020248"),
+                            fontSize: getFontSize(
+                              28,
+                            ),
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        children: [
+                          Container(
+                            // color: Colors.black12,
+                            padding: EdgeInsets.all(20),
+                            width: double.infinity,
+                            child: Text(
+                              // "The most well-known and widely-used altcoin is bitcoin. Even if technology isn't your thing, you've undoubtedly heard of the company.",
+                              AppLocalizations.of(context)!
+                                  .translate("newhome411")!,
+                              // overflow: TextOverflow.ellipsis,
+                              softWrap: true,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: getFontSize(
+                                  19,
+                                ),
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 20),
+                      ExpansionTile(
+                        title: Text(
+                          AppLocalizations.of(context)!.translate("newhome42")!,
+                          softWrap: true,
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                            color: getColorFromHex("#020248"),
+                            fontSize: getFontSize(
+                              28,
+                            ),
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        children: [
+                          Container(
+                            // color: Colors.black12,
+                            padding: EdgeInsets.all(20),
+                            width: double.infinity,
+                            child: Text(
+                              // "The most well-known and widely-used altcoin is bitcoin. Even if technology isn't your thing, you've undoubtedly heard of the company.",
+                              AppLocalizations.of(context)!
+                                  .translate("newhome422")!,
+                              // overflow: TextOverflow.ellipsis,
+                              softWrap: true,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: getFontSize(
+                                  19,
+                                ),
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 20),
+                      ExpansionTile(
+                        title: Text(
+                          // "What is Bitcoin?",
+                          AppLocalizations.of(context)!.translate("newhome43")!,
+                          // overflow: TextOverflow.ellipsis,
+                          softWrap: true,
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                            color: getColorFromHex("#020248"),
+                            fontSize: getFontSize(
+                              28,
+                            ),
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        children: [
+                          Container(
+                            // color: Colors.black12,
+                            padding: EdgeInsets.all(20),
+                            width: double.infinity,
+                            child: Text(
+                              // "The most well-known and widely-used altcoin is bitcoin. Even if technology isn't your thing, you've undoubtedly heard of the company.",
+                              AppLocalizations.of(context)!
+                                  .translate("newhome433")!,
+                              // overflow: TextOverflow.ellipsis,
+                              softWrap: true,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: getFontSize(
+                                  19,
+                                ),
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 20),
+                      ExpansionTile(
+                        title: Text(
+                          // "What is Bitcoin?",
+                          AppLocalizations.of(context)!.translate("newhome44")!,
+                          // overflow: TextOverflow.ellipsis,
+                          softWrap: true,
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                            color: getColorFromHex("#020248"),
+                            fontSize: getFontSize(
+                              28,
+                            ),
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        children: [
+                          Container(
+                            // color: Colors.black12,
+                            padding: EdgeInsets.all(20),
+                            width: double.infinity,
+                            child: Text(
+                              // "The most well-known and widely-used altcoin is bitcoin. Even if technology isn't your thing, you've undoubtedly heard of the company.",
+                              AppLocalizations.of(context)!
+                                  .translate("newhome444")!,
+                              // overflow: TextOverflow.ellipsis,
+                              softWrap: true,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: getFontSize(
+                                  19,
+                                ),
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
                   ),
                 ),
-                Divider(
-                  color: Colors.grey,
-                  endIndent: 30,
-                  indent: 30,
-                ),
+                SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Container(
@@ -1082,1448 +1217,11 @@ class _HomePageRealState extends State<HomePageReal> {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             )
           ],
         ),
-
-        // Container(
-        //   width: size.width,
-        //   child: Column(
-        //     mainAxisAlignment: MainAxisAlignment.start,
-        //     children: [
-        //       Container(
-        // width: getHorizontalSize(
-        //   310.00,
-        // ),
-        //         decoration: BoxDecoration(
-        //             color: getColorFromHex("#4A41F4")),
-        //         child: Column(
-        //           crossAxisAlignment: CrossAxisAlignment.start,
-        //           mainAxisAlignment: MainAxisAlignment.end,
-        //           children: [
-        //             Align(
-        //               alignment: Alignment.center,
-        //               child: Padding(
-        //                 padding: getPadding(all: 10),
-        //                 child: Text(
-        //                   AppLocalizations.of(context)!
-        //                       .translate("bitup_homet")!,
-        //                   // overflow: TextOverflow.ellipsis,
-        //                   softWrap: true,
-        //                   textAlign: TextAlign.left,
-        //                   style: TextStyle(
-        //                     color: Colors.white,
-        //                     fontSize: getFontSize(
-        //                       12,
-        //                     ),
-        //                     fontFamily: 'Poppins',
-        //                     fontWeight: FontWeight.w900,
-        //                   ),
-        //                 ),
-        //               ),
-        //             ),
-        //             // Padding(
-        //             //   padding: const EdgeInsets.all(8.0),
-        //             //   child: Image.asset(
-        //             //       "assets/images/bitcoin code horz logo.png"),
-        //             // ),
-        //             Align(
-        //               alignment: Alignment.center,
-        //               child: Padding(
-        //                 padding: getPadding(all: 10),
-        //                 child: Text(
-        //                   AppLocalizations.of(context)!
-        //                       .translate("bitup_home1")!,
-        //                   // overflow: TextOverflow.ellipsis,
-        //                   softWrap: true,
-        //                   textAlign: TextAlign.left,
-        //                   style: TextStyle(
-        //                     color: Colors.white,
-        //                     fontSize: getFontSize(
-        //                       28,
-        //                     ),
-        //                     fontFamily: 'Poppins',
-        //                     fontWeight: FontWeight.w900,
-        //                   ),
-        //                 ),
-        //               ),
-        //             ),
-        //             Container(
-        //               // width: getHorizontalSize(
-        //               //   215.00,
-        //               // ),
-        //               margin: getMargin(
-        //                 left: 10,
-        //                 top: 4,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home2")!,
-        //                 maxLines: null,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.gray700,
-        //                   fontSize: getFontSize(
-        //                     16,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w400,
-        //                 ),
-        //               ),
-        //             ),
-        //             SizedBox(
-        //               height: 20,
-        //             ),
-        //             if (disableIframe == true)
-        //               Container(
-        //                 padding: const EdgeInsets.only(
-        //                     left: 10, right: 10),
-        //                 height: 520,
-        //                 child:
-        //                     WebViewWidget(controller: controller),
-        //               ),
-        //             Padding(
-        //               padding: getPadding(top: 15),
-        //               child: Container(
-        //                 height: getVerticalSize(
-        //                   175.00,
-        //                 ),
-        //                 width: getHorizontalSize(double.infinity),
-        //                 decoration: BoxDecoration(
-        //                   image: DecorationImage(
-        //                       image: AssetImage(
-        //                           "assets/images/bitup_home_image1.png"),
-        //                       fit: BoxFit.fill),
-        //                   // color: ColorConstant.deepPurpleA70065.withOpacity(0.2),
-        //                 ),
-        //               ),
-        //             ),
-        //             Row(
-        //               children: [
-        //                 Expanded(
-        //                   flex: 1,
-        //                   child: Container(
-        //                     padding: getPadding(
-        //                       left: 9,
-        //                       top: 10,
-        //                       right: 9,
-        //                       bottom: 10,
-        //                     ),
-        //                     decoration: BoxDecoration(
-        //                       color: ColorConstant.blueGray900,
-        //                     ),
-        //                     child: Column(
-        //                       crossAxisAlignment:
-        //                           CrossAxisAlignment.start,
-        //                       mainAxisAlignment:
-        //                           MainAxisAlignment.center,
-        //                       children: [
-        //                         Text(
-        //                           AppLocalizations.of(context)!
-        //                               .translate("bitup_home3")!
-        //                               .toUpperCase(),
-        //                           overflow: TextOverflow.ellipsis,
-        //                           textAlign: TextAlign.left,
-        //                           style: TextStyle(
-        //                             color: ColorConstant.whiteA700,
-        //                             fontSize: getFontSize(
-        //                               18,
-        //                             ),
-        //                             fontFamily: 'Poppins',
-        //                             fontWeight: FontWeight.w500,
-        //                           ),
-        //                         ),
-        //                         Container(
-        //                           width: getHorizontalSize(
-        //                             131.00,
-        //                           ),
-        //                           margin: getMargin(
-        //                             top: 10,
-        //                             bottom: 1,
-        //                           ),
-        //                           child: Text(
-        //                             AppLocalizations.of(context)!
-        //                                 .translate("bitup_home4")!,
-        //                             maxLines: null,
-        //                             textAlign: TextAlign.left,
-        //                             style: TextStyle(
-        //                               color: ColorConstant.gray300,
-        //                               fontSize: getFontSize(
-        //                                 15,
-        //                               ),
-        //                               fontFamily: 'Poppins',
-        //                               fontWeight: FontWeight.w400,
-        //                             ),
-        //                           ),
-        //                         ),
-        //                       ],
-        //                     ),
-        //                   ),
-        //                 ),
-        //                 Expanded(
-        //                   flex: 1,
-        //                   child: Container(
-        //                     padding: getPadding(
-        //                       left: 9,
-        //                       top: 10,
-        //                       right: 9,
-        //                       bottom: 10,
-        //                     ),
-        //                     decoration: BoxDecoration(
-        //                       color: ColorConstant.blue80001,
-        //                     ),
-        //                     child: Column(
-        //                       crossAxisAlignment:
-        //                           CrossAxisAlignment.start,
-        //                       mainAxisAlignment:
-        //                           MainAxisAlignment.center,
-        //                       children: [
-        //                         Text(
-        //                           AppLocalizations.of(context)!
-        //                               .translate("bitup_home5")!
-        //                               .toUpperCase(),
-        //                           overflow: TextOverflow.ellipsis,
-        //                           textAlign: TextAlign.left,
-        //                           style: TextStyle(
-        //                             color: ColorConstant.whiteA700,
-        //                             fontSize: getFontSize(
-        //                               18,
-        //                             ),
-        //                             fontFamily: 'Poppins',
-        //                             fontWeight: FontWeight.w500,
-        //                           ),
-        //                         ),
-        //                         Container(
-        //                           width: getHorizontalSize(
-        //                             131.00,
-        //                           ),
-        //                           margin: getMargin(
-        //                             top: 10,
-        //                             bottom: 1,
-        //                           ),
-        //                           child: Text(
-        //                             AppLocalizations.of(context)!
-        //                                 .translate("bitup_home6")!,
-        //                             maxLines: null,
-        //                             textAlign: TextAlign.left,
-        //                             style: TextStyle(
-        //                               color: ColorConstant.gray300,
-        //                               fontSize: getFontSize(
-        //                                 15,
-        //                               ),
-        //                               fontFamily: 'Poppins',
-        //                               fontWeight: FontWeight.w400,
-        //                             ),
-        //                           ),
-        //                         ),
-        //                       ],
-        //                     ),
-        //                   ),
-        //                 ),
-        //               ],
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-        //       Container(
-        //         width: getHorizontalSize(
-        //           310.00,
-        //         ),
-        //         padding: getPadding(
-        //           left: 13,
-        //           top: 17,
-        //           right: 13,
-        //           bottom: 17,
-        //         ),
-        //         decoration: BoxDecoration(
-        //           color: ColorConstant.blueGray900,
-        //         ),
-        //         child: Column(
-        //           crossAxisAlignment: CrossAxisAlignment.start,
-        //           mainAxisAlignment: MainAxisAlignment.start,
-        //           children: [
-        //             Padding(
-        //               padding: getPadding(
-        //                 top: 27,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home7")!,
-        //                 overflow: TextOverflow.ellipsis,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.whiteA700,
-        //                   fontSize: getFontSize(
-        //                     32,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w900,
-        //                 ),
-        //               ),
-        //             ),
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 283.00,
-        //               ),
-        //               margin: getMargin(
-        //                 top: 33,
-        //               ),
-        //               padding: getPadding(
-        //                 left: 31,
-        //                 top: 14,
-        //                 right: 31,
-        //                 bottom: 14,
-        //               ),
-        //               decoration: BoxDecoration(
-        //                 color: ColorConstant.indigoA200,
-        //               ),
-        //               child: Column(
-        //                 crossAxisAlignment:
-        //                     CrossAxisAlignment.start,
-        //                 mainAxisAlignment: MainAxisAlignment.center,
-        //                 children: [
-        //                   Padding(
-        //                     padding: getPadding(
-        //                       top: 2,
-        //                     ),
-        //                     child: Text(
-        //                       AppLocalizations.of(context)!
-        //                           .translate("bitup_home8")!
-        //                           .toUpperCase(),
-        //                       overflow: TextOverflow.ellipsis,
-        //                       textAlign: TextAlign.left,
-        //                       style: TextStyle(
-        //                         color: ColorConstant.whiteA700,
-        //                         fontSize: getFontSize(
-        //                           18,
-        //                         ),
-        //                         fontFamily: 'Poppins',
-        //                         fontWeight: FontWeight.w500,
-        //                       ),
-        //                     ),
-        //                   ),
-        //                   Container(
-        //                     width: getHorizontalSize(
-        //                       215.00,
-        //                     ),
-        //                     margin: getMargin(
-        //                       top: 10,
-        //                     ),
-        //                     child: Text(
-        //                       AppLocalizations.of(context)!
-        //                           .translate("bitup_home9")!,
-        //                       maxLines: null,
-        //                       textAlign: TextAlign.left,
-        //                       style: TextStyle(
-        //                         color: ColorConstant.blueGray100,
-        //                         fontSize: getFontSize(
-        //                           15,
-        //                         ),
-        //                         fontFamily: 'Poppins',
-        //                         fontWeight: FontWeight.w400,
-        //                       ),
-        //                     ),
-        //                   ),
-        //                 ],
-        //               ),
-        //             ),
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 283.00,
-        //               ),
-        //               margin: getMargin(
-        //                 top: 16,
-        //               ),
-        //               padding: getPadding(
-        //                 left: 31,
-        //                 top: 14,
-        //                 right: 31,
-        //                 bottom: 14,
-        //               ),
-        //               decoration: BoxDecoration(
-        //                 color: ColorConstant.indigoA200,
-        //               ),
-        //               child: Column(
-        //                 crossAxisAlignment:
-        //                     CrossAxisAlignment.start,
-        //                 mainAxisAlignment: MainAxisAlignment.center,
-        //                 children: [
-        //                   Padding(
-        //                     padding: getPadding(
-        //                       top: 2,
-        //                     ),
-        //                     child: Text(
-        //                       AppLocalizations.of(context)!
-        //                           .translate("bitup_home10")!
-        //                           .toUpperCase(),
-        //                       overflow: TextOverflow.ellipsis,
-        //                       textAlign: TextAlign.left,
-        //                       style: TextStyle(
-        //                         color: ColorConstant.whiteA700,
-        //                         fontSize: getFontSize(
-        //                           18,
-        //                         ),
-        //                         fontFamily: 'Poppins',
-        //                         fontWeight: FontWeight.w500,
-        //                       ),
-        //                     ),
-        //                   ),
-        //                   Container(
-        //                     width: getHorizontalSize(
-        //                       215.00,
-        //                     ),
-        //                     margin: getMargin(
-        //                       top: 10,
-        //                     ),
-        //                     child: Text(
-        //                       AppLocalizations.of(context)!
-        //                           .translate("bitup_home11")!,
-        //                       maxLines: null,
-        //                       textAlign: TextAlign.left,
-        //                       style: TextStyle(
-        //                         color: ColorConstant.blueGray100,
-        //                         fontSize: getFontSize(
-        //                           15,
-        //                         ),
-        //                         fontFamily: 'Poppins',
-        //                         fontWeight: FontWeight.w400,
-        //                       ),
-        //                     ),
-        //                   ),
-        //                 ],
-        //               ),
-        //             ),
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 283.00,
-        //               ),
-        //               margin: getMargin(
-        //                 top: 16,
-        //               ),
-        //               padding: getPadding(
-        //                 left: 31,
-        //                 top: 14,
-        //                 right: 31,
-        //                 bottom: 14,
-        //               ),
-        //               decoration: BoxDecoration(
-        //                 color: ColorConstant.indigoA200,
-        //               ),
-        //               child: Column(
-        //                 crossAxisAlignment:
-        //                     CrossAxisAlignment.start,
-        //                 mainAxisAlignment: MainAxisAlignment.center,
-        //                 children: [
-        //                   Padding(
-        //                     padding: getPadding(
-        //                       top: 2,
-        //                     ),
-        //                     child: Text(
-        //                       AppLocalizations.of(context)!
-        //                           .translate("bitup_home12")!
-        //                           .toUpperCase(),
-        //                       overflow: TextOverflow.ellipsis,
-        //                       textAlign: TextAlign.left,
-        //                       style: TextStyle(
-        //                         color: ColorConstant.whiteA700,
-        //                         fontSize: getFontSize(
-        //                           18,
-        //                         ),
-        //                         fontFamily: 'Poppins',
-        //                         fontWeight: FontWeight.w500,
-        //                       ),
-        //                     ),
-        //                   ),
-        //                   Container(
-        //                     width: getHorizontalSize(
-        //                       215.00,
-        //                     ),
-        //                     margin: getMargin(
-        //                       top: 10,
-        //                     ),
-        //                     child: Text(
-        //                       AppLocalizations.of(context)!
-        //                           .translate("bitup_home13")!,
-        //                       maxLines: null,
-        //                       textAlign: TextAlign.left,
-        //                       style: TextStyle(
-        //                         color: ColorConstant.blueGray100,
-        //                         fontSize: getFontSize(
-        //                           15,
-        //                         ),
-        //                         fontFamily: 'Poppins',
-        //                         fontWeight: FontWeight.w400,
-        //                       ),
-        //                     ),
-        //                   ),
-        //                 ],
-        //               ),
-        //             ),
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 283.00,
-        //               ),
-        //               margin: getMargin(
-        //                 top: 16,
-        //               ),
-        //               padding: getPadding(
-        //                 left: 31,
-        //                 top: 14,
-        //                 right: 31,
-        //                 bottom: 14,
-        //               ),
-        //               decoration: BoxDecoration(
-        //                 color: ColorConstant.indigoA200,
-        //               ),
-        //               child: Column(
-        //                 crossAxisAlignment:
-        //                     CrossAxisAlignment.start,
-        //                 mainAxisAlignment: MainAxisAlignment.center,
-        //                 children: [
-        //                   Padding(
-        //                     padding: getPadding(
-        //                       top: 2,
-        //                     ),
-        //                     child: Text(
-        //                       AppLocalizations.of(context)!
-        //                           .translate("bitup_home14")!
-        //                           .toUpperCase(),
-        //                       overflow: TextOverflow.ellipsis,
-        //                       textAlign: TextAlign.left,
-        //                       style: TextStyle(
-        //                         color: ColorConstant.whiteA700,
-        //                         fontSize: getFontSize(
-        //                           18,
-        //                         ),
-        //                         fontFamily: 'Poppins',
-        //                         fontWeight: FontWeight.w500,
-        //                       ),
-        //                     ),
-        //                   ),
-        //                   Container(
-        //                     width: getHorizontalSize(
-        //                       215.00,
-        //                     ),
-        //                     margin: getMargin(
-        //                       top: 10,
-        //                     ),
-        //                     child: Text(
-        //                       AppLocalizations.of(context)!
-        //                           .translate("bitup_home15")!,
-        //                       maxLines: null,
-        //                       textAlign: TextAlign.left,
-        //                       style: TextStyle(
-        //                         color: ColorConstant.blueGray100,
-        //                         fontSize: getFontSize(
-        //                           15,
-        //                         ),
-        //                         fontFamily: 'Poppins',
-        //                         fontWeight: FontWeight.w400,
-        //                       ),
-        //                     ),
-        //                   ),
-        //                 ],
-        //               ),
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-        //       Container(
-        //         height: getVerticalSize(
-        //           607.00,
-        //         ),
-        //         width: getHorizontalSize(
-        //           310.00,
-        //         ),
-        //         child: Stack(
-        //           alignment: Alignment.center,
-        //           children: [
-        //             CustomImageView(
-        //               imagePath: ImageConstant.imgImage,
-        //               height: getVerticalSize(
-        //                 607.00,
-        //               ),
-        //               width: getHorizontalSize(
-        //                 310.00,
-        //               ),
-        //               alignment: Alignment.center,
-        //             ),
-        //             Align(
-        //               alignment: Alignment.center,
-        //               child: Padding(
-        //                 padding: getPadding(
-        //                   left: 23,
-        //                   right: 23,
-        //                 ),
-        //                 child: Column(
-        //                   mainAxisSize: MainAxisSize.min,
-        //                   crossAxisAlignment:
-        //                       CrossAxisAlignment.start,
-        //                   mainAxisAlignment:
-        //                       MainAxisAlignment.start,
-        //                   children: [
-        //                     Container(
-        //                       width: getHorizontalSize(
-        //                         212.00,
-        //                       ),
-        //                       child: Text(
-        //                         AppLocalizations.of(context)!
-        //                             .translate("bitup_home16")!,
-        //                         maxLines: null,
-        //                         textAlign: TextAlign.left,
-        //                         style: TextStyle(
-        //                           color: ColorConstant.whiteA700,
-        //                           fontSize: getFontSize(
-        //                             34,
-        //                           ),
-        //                           fontFamily: 'Poppins',
-        //                           fontWeight: FontWeight.w900,
-        //                         ),
-        //                       ),
-        //                     ),
-        //                     Container(
-        //                       width: getHorizontalSize(
-        //                         256.00,
-        //                       ),
-        //                       margin: getMargin(
-        //                         top: 13,
-        //                       ),
-        //                       child: Text(
-        //                         AppLocalizations.of(context)!
-        //                             .translate("bitup_home17")!,
-        //                         maxLines: null,
-        //                         textAlign: TextAlign.left,
-        //                         style: TextStyle(
-        //                           color: ColorConstant.whiteA700,
-        //                           fontSize: getFontSize(
-        //                             20,
-        //                           ),
-        //                           fontFamily: 'Poppins',
-        //                           fontWeight: FontWeight.w400,
-        //                         ),
-        //                       ),
-        //                     ),
-        //                   ],
-        //                 ),
-        //               ),
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-        //       Container(
-        //         width: getHorizontalSize(
-        //           310.00,
-        //         ),
-        //         padding: getPadding(
-        //           left: 23,
-        //           top: 24,
-        //           right: 23,
-        //           bottom: 24,
-        //         ),
-        //         decoration: BoxDecoration(
-        //           color: ColorConstant.whiteA700,
-        //         ),
-        //         child: Column(
-        //           crossAxisAlignment: CrossAxisAlignment.start,
-        //           mainAxisAlignment: MainAxisAlignment.start,
-        //           children: [
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 235.00,
-        //               ),
-        //               margin: getMargin(
-        //                 top: 17,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home18")!,
-        //                 maxLines: null,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.gray900,
-        //                   fontSize: getFontSize(
-        //                     34,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w900,
-        //                 ),
-        //               ),
-        //             ),
-        //             Padding(
-        //               padding: getPadding(
-        //                 top: 73,
-        //                 right: 9,
-        //               ),
-        //               child: Row(
-        //                 mainAxisAlignment:
-        //                     MainAxisAlignment.spaceBetween,
-        //                 crossAxisAlignment:
-        //                     CrossAxisAlignment.start,
-        //                 children: [
-        //                   CustomImageView(
-        //                     svgPath: ImageConstant.imgOrnament,
-        //                     height: getVerticalSize(
-        //                       332.00,
-        //                     ),
-        //                     width: getHorizontalSize(
-        //                       21.00,
-        //                     ),
-        //                     margin: getMargin(
-        //                       top: 1,
-        //                       bottom: 23,
-        //                     ),
-        //                   ),
-        //                   Column(
-        //                     crossAxisAlignment:
-        //                         CrossAxisAlignment.start,
-        //                     mainAxisAlignment:
-        //                         MainAxisAlignment.start,
-        //                     children: [
-        //                       Text(
-        //                         AppLocalizations.of(context)!
-        //                             .translate("bitup_home19")!
-        //                             .toUpperCase(),
-        //                         overflow: TextOverflow.ellipsis,
-        //                         textAlign: TextAlign.left,
-        //                         style: TextStyle(
-        //                           color: ColorConstant.indigoA700,
-        //                           fontSize: getFontSize(
-        //                             22,
-        //                           ),
-        //                           fontFamily: 'Poppins',
-        //                           fontWeight: FontWeight.w900,
-        //                         ),
-        //                       ),
-        //                       Container(
-        //                         width: getHorizontalSize(
-        //                           212.00,
-        //                         ),
-        //                         margin: getMargin(
-        //                           top: 12,
-        //                         ),
-        //                         child: Text(
-        //                           AppLocalizations.of(context)!
-        //                               .translate("bitup_home20")!,
-        //                           maxLines: null,
-        //                           textAlign: TextAlign.left,
-        //                           style: TextStyle(
-        //                             color:
-        //                                 ColorConstant.blueGray400,
-        //                             fontSize: getFontSize(
-        //                               18,
-        //                             ),
-        //                             fontFamily: 'Poppins',
-        //                             fontWeight: FontWeight.w400,
-        //                           ),
-        //                         ),
-        //                       ),
-        //                       Padding(
-        //                         padding: getPadding(
-        //                           top: 16,
-        //                         ),
-        //                         child: Text(
-        //                           AppLocalizations.of(context)!
-        //                               .translate("bitup_home21")!
-        //                               .toUpperCase(),
-        //                           overflow: TextOverflow.ellipsis,
-        //                           textAlign: TextAlign.left,
-        //                           style: TextStyle(
-        //                             color: ColorConstant.indigoA700,
-        //                             fontSize: getFontSize(
-        //                               22,
-        //                             ),
-        //                             fontFamily: 'Poppins',
-        //                             fontWeight: FontWeight.w900,
-        //                           ),
-        //                         ),
-        //                       ),
-        //                       Container(
-        //                         width: getHorizontalSize(
-        //                           212.00,
-        //                         ),
-        //                         margin: getMargin(
-        //                           top: 12,
-        //                         ),
-        //                         child: Text(
-        //                           AppLocalizations.of(context)!
-        //                               .translate("bitup_home22")!,
-        //                           maxLines: null,
-        //                           textAlign: TextAlign.left,
-        //                           style: TextStyle(
-        //                             color:
-        //                                 ColorConstant.blueGray400,
-        //                             fontSize: getFontSize(
-        //                               16,
-        //                             ),
-        //                             fontFamily: 'Poppins',
-        //                             fontWeight: FontWeight.w400,
-        //                           ),
-        //                         ),
-        //                       ),
-        //                       Padding(
-        //                         padding: getPadding(
-        //                           top: 13,
-        //                         ),
-        //                         child: Text(
-        //                           AppLocalizations.of(context)!
-        //                               .translate("bitup_home23")!
-        //                               .toUpperCase(),
-        //                           overflow: TextOverflow.ellipsis,
-        //                           textAlign: TextAlign.left,
-        //                           style: TextStyle(
-        //                             color: ColorConstant.indigoA700,
-        //                             fontSize: getFontSize(
-        //                               22,
-        //                             ),
-        //                             fontFamily: 'Poppins',
-        //                             fontWeight: FontWeight.w900,
-        //                           ),
-        //                         ),
-        //                       ),
-        //                       Container(
-        //                         width: getHorizontalSize(
-        //                           212.00,
-        //                         ),
-        //                         margin: getMargin(
-        //                           top: 12,
-        //                         ),
-        //                         child: Text(
-        //                           AppLocalizations.of(context)!
-        //                               .translate("bitup_home24")!,
-        //                           maxLines: null,
-        //                           textAlign: TextAlign.left,
-        //                           style: TextStyle(
-        //                             color:
-        //                                 ColorConstant.blueGray400,
-        //                             fontSize: getFontSize(
-        //                               16,
-        //                             ),
-        //                             fontFamily: 'Poppins',
-        //                             fontWeight: FontWeight.w400,
-        //                           ),
-        //                         ),
-        //                       ),
-        //                     ],
-        //                   ),
-        //                 ],
-        //               ),
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-        //       Container(
-        //         width: getHorizontalSize(
-        //           310.00,
-        //         ),
-        //         padding: getPadding(
-        //           left: 23,
-        //           top: 43,
-        //           right: 23,
-        //           bottom: 43,
-        //         ),
-        //         decoration: BoxDecoration(
-        //           color: ColorConstant.gray50,
-        //         ),
-        //         child: Column(
-        //           crossAxisAlignment: CrossAxisAlignment.start,
-        //           mainAxisAlignment: MainAxisAlignment.center,
-        //           children: [
-        //             Container(
-        //               height: getVerticalSize(
-        //                 330.85,
-        //               ),
-        //               width: getHorizontalSize(
-        //                 263.85,
-        //               ),
-        //               decoration: BoxDecoration(
-        //                 image: DecorationImage(
-        //                     image: AssetImage(
-        //                         "assets/images/bitup_home_image2.png"),
-        //                     fit: BoxFit.fill),
-        //               ),
-        //             ),
-        //             Padding(
-        //               padding: getPadding(
-        //                 top: 27,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home25")!,
-        //                 // overflow: TextOverflow.ellipsis,
-        //                 softWrap: true,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.gray900,
-        //                   fontSize: getFontSize(
-        //                     32,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w900,
-        //                 ),
-        //               ),
-        //             ),
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 213.00,
-        //               ),
-        //               margin: getMargin(
-        //                 top: 14,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home26")!,
-        //                 maxLines: null,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.gray900,
-        //                   fontSize: getFontSize(
-        //                     20,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w400,
-        //                 ),
-        //               ),
-        //             ),
-        //             Padding(
-        //               padding: getPadding(
-        //                 top: 6,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home27")!,
-        //                 overflow: TextOverflow.ellipsis,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.indigoA700,
-        //                   fontSize: getFontSize(
-        //                     15,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w900,
-        //                 ),
-        //               ),
-        //             ),
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 213.00,
-        //               ),
-        //               margin: getMargin(
-        //                 top: 14,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home28")!,
-        //                 maxLines: null,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.gray900,
-        //                   fontSize: getFontSize(
-        //                     20,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w400,
-        //                 ),
-        //               ),
-        //             ),
-        //             Padding(
-        //               padding: getPadding(
-        //                 top: 6,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home29")!,
-        //                 overflow: TextOverflow.ellipsis,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.indigoA700,
-        //                   fontSize: getFontSize(
-        //                     15,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w900,
-        //                 ),
-        //               ),
-        //             ),
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 213.00,
-        //               ),
-        //               margin: getMargin(
-        //                 top: 14,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home30")!,
-        //                 maxLines: null,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.gray900,
-        //                   fontSize: getFontSize(
-        //                     20,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w400,
-        //                 ),
-        //               ),
-        //             ),
-        //             Padding(
-        //               padding: getPadding(
-        //                 top: 6,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home31")!,
-        //                 overflow: TextOverflow.ellipsis,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.indigoA700,
-        //                   fontSize: getFontSize(
-        //                     15,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w900,
-        //                 ),
-        //               ),
-        //             ),
-        //             // Container(
-        //             //   height: getVerticalSize(
-        //             //     3.00,
-        //             //   ),
-        //             //   margin: getMargin(
-        //             //     top: 23,
-        //             //     bottom: 3,
-        //             //   ),
-        //             //   child: SmoothIndicator(
-        //             //     offset: 0,
-        //             //     count: 6,
-        //             //     axisDirection: Axis.horizontal,
-        //             //     effect: ScrollingDotsEffect(
-        //             //       spacing: 3.300003,
-        //             //       activeDotColor: ColorConstant.indigoA700,
-        //             //       dotColor: ColorConstant.gray9004c,
-        //             //       dotHeight: getVerticalSize(
-        //             //         3.00,
-        //             //       ),
-        //             //       dotWidth: getHorizontalSize(
-        //             //         41.00,
-        //             //       ),
-        //             //     ),
-        //             //   ),
-        //             // ),
-        //           ],
-        //         ),
-        //       ),
-        //       Container(
-        //         width: getHorizontalSize(
-        //           310.00,
-        //         ),
-        //         padding: getPadding(
-        //           top: 22,
-        //           bottom: 22,
-        //         ),
-        //         decoration: BoxDecoration(
-        //           color: ColorConstant.blueGray900,
-        //         ),
-        //         child: Column(
-        //           crossAxisAlignment: CrossAxisAlignment.start,
-        //           mainAxisAlignment: MainAxisAlignment.start,
-        //           children: [
-        //             Align(
-        //               alignment: Alignment.centerRight,
-        //               child: Padding(
-        //                 padding: getPadding(
-        //                     top: 24, right: 40, left: 20),
-        //                 child: Text(
-        //                   AppLocalizations.of(context)!
-        //                       .translate("bitup_home32")!,
-        //                   // overflow: TextOverflow.ellipsis,
-        //                   softWrap: true,
-        //                   textAlign: TextAlign.left,
-        //                   style: TextStyle(
-        //                     color: ColorConstant.whiteA700,
-        //                     fontSize: getFontSize(
-        //                       29.776594161987305,
-        //                     ),
-        //                     fontFamily: 'Poppins',
-        //                     fontWeight: FontWeight.w900,
-        //                   ),
-        //                 ),
-        //               ),
-        //             ),
-        //             Align(
-        //               alignment: Alignment.center,
-        //               child: Container(
-        //                 height: getVerticalSize(
-        //                   248.00,
-        //                 ),
-        //                 width: getHorizontalSize(
-        //                   263.00,
-        //                 ),
-        //                 margin: getMargin(
-        //                   top: 40,
-        //                 ),
-        //                 decoration: BoxDecoration(
-        //                   image: DecorationImage(
-        //                       image: AssetImage(
-        //                           "assets/images/bitup_home_image3.png"),
-        //                       fit: BoxFit.fill),
-        //                   // color: ColorConstant.gray400,
-        //                 ),
-        //               ),
-        //             ),
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 242.00,
-        //               ),
-        //               margin: getMargin(
-        //                 left: 23,
-        //                 top: 25,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home33")!,
-        //                 maxLines: null,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.whiteA700,
-        //                   fontSize: getFontSize(
-        //                     28,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w900,
-        //                 ),
-        //               ),
-        //             ),
-        //             Container(
-        //               width: getHorizontalSize(
-        //                 237.00,
-        //               ),
-        //               margin: getMargin(
-        //                 left: 23,
-        //                 top: 6,
-        //               ),
-        //               child: Text(
-        //                 AppLocalizations.of(context)!
-        //                     .translate("bitup_home34")!,
-        //                 maxLines: null,
-        //                 textAlign: TextAlign.left,
-        //                 style: TextStyle(
-        //                   color: ColorConstant.gray30001,
-        //                   fontSize: getFontSize(
-        //                     18,
-        //                   ),
-        //                   fontFamily: 'Poppins',
-        //                   fontWeight: FontWeight.w400,
-        //                 ),
-        //               ),
-        //             ),
-        //             Align(
-        //               alignment: Alignment.centerRight,
-        //               child: SingleChildScrollView(
-        //                 scrollDirection: Axis.horizontal,
-        //                 padding: getPadding(
-        //                   left: 23,
-        //                   top: 66,
-        //                 ),
-        //                 child: IntrinsicWidth(
-        //                   child: Row(
-        //                     mainAxisAlignment:
-        //                         MainAxisAlignment.center,
-        //                     children: [
-        //                       Container(
-        //                         height: getVerticalSize(
-        //                           200.00,
-        //                         ),
-        //                         width: getHorizontalSize(
-        //                           100.00,
-        //                         ),
-        //                         decoration: BoxDecoration(
-        //                           image: DecorationImage(
-        //                               image: AssetImage(
-        //                                   "assets/images/bitup_home_image4.png"),
-        //                               fit: BoxFit.fill),
-        //                           // color: ColorConstant.blueGray10001,
-        //                         ),
-        //                       ),
-        //                       Padding(
-        //                         padding: getPadding(
-        //                           left: 16,
-        //                           right: 16,
-        //                           top: 26,
-        //                           bottom: 35,
-        //                         ),
-        //                         child: Column(
-        //                           crossAxisAlignment:
-        //                               CrossAxisAlignment.start,
-        //                           mainAxisAlignment:
-        //                               MainAxisAlignment.start,
-        //                           children: [
-        //                             Text(
-        //                               AppLocalizations.of(context)!
-        //                                   .translate(
-        //                                       "bitup_home35")!,
-        //                               overflow:
-        //                                   TextOverflow.ellipsis,
-        //                               textAlign: TextAlign.left,
-        //                               style: TextStyle(
-        //                                 color:
-        //                                     ColorConstant.whiteA700,
-        //                                 fontSize: getFontSize(
-        //                                   18,
-        //                                 ),
-        //                                 fontFamily: 'Poppins',
-        //                                 fontWeight: FontWeight.w900,
-        //                               ),
-        //                             ),
-        //                             Container(
-        //                               width: getHorizontalSize(
-        //                                 130.00,
-        //                               ),
-        //                               margin: getMargin(
-        //                                 top: 8,
-        //                               ),
-        //                               child: Text(
-        //                                 AppLocalizations.of(
-        //                                         context)!
-        //                                     .translate(
-        //                                         "bitup_home36")!,
-        //                                 maxLines: null,
-        //                                 textAlign: TextAlign.left,
-        //                                 style: TextStyle(
-        //                                   color: ColorConstant
-        //                                       .gray30001,
-        //                                   fontSize: getFontSize(
-        //                                     15,
-        //                                   ),
-        //                                   fontFamily: 'Poppins',
-        //                                   fontWeight:
-        //                                       FontWeight.w400,
-        //                                 ),
-        //                               ),
-        //                             ),
-        //                           ],
-        //                         ),
-        //                       ),
-        //                       Container(
-        //                         height: getVerticalSize(
-        //                           200.00,
-        //                         ),
-        //                         width: getHorizontalSize(
-        //                           100.00,
-        //                         ),
-        //                         decoration: BoxDecoration(
-        //                           image: DecorationImage(
-        //                               image: AssetImage(
-        //                                   "assets/images/bitup_home_image5.png"),
-        //                               fit: BoxFit.fill),
-        //                           // color: ColorConstant.blueGray10001,
-        //                         ),
-        //                       ),
-        //                       // CustomImageView(
-        //                       //   imagePath: ImageConstant.imgImage116x66,
-        //                       //   height: getVerticalSize(
-        //                       //     200.00,
-        //                       //   ),
-        //                       //   width: getHorizontalSize(
-        //                       //     100.00,
-        //                       //   ),
-        //                       //   margin: getMargin(
-        //                       //     left: 25,
-        //                       //   ),
-        //                       // ),
-        //                       // Padding(
-        //                       //   padding: getPadding(
-        //                       //     left: 16,
-        //                       //   ),
-        //                       //   child: Column(
-        //                       //     mainAxisAlignment:
-        //                       //     MainAxisAlignment.start,
-        //                       //     children: [
-        //                       //       Container(
-        //                       //         width: getHorizontalSize(
-        //                       //           134.00,
-        //                       //         ),
-        //                       //         child: Text(
-        //                       //           "Use the Bitcoin Up app right now.",
-        //                       //           maxLines: null,
-        //                       //           textAlign: TextAlign.left,
-        //                       //           style: TextStyle(
-        //                       //             color: ColorConstant.whiteA700,
-        //                       //             fontSize: getFontSize(
-        //                       //               18,
-        //                       //             ),
-        //                       //             fontFamily: 'Poppins',
-        //                       //             fontWeight: FontWeight.w900,
-        //                       //           ),
-        //                       //         ),
-        //                       //       ),
-        //                       //       Container(
-        //                       //         width: getHorizontalSize(
-        //                       //           134.00,
-        //                       //         ),
-        //                       //         margin: getMargin(
-        //                       //           top: 9,
-        //                       //         ),
-        //                       //         child: Text(
-        //                       //           "Researchers at DEF Genetics have made significant progress in the use of gene editing to treat [disease]. Using the CRISPR-Cas9 system, the team was able to make targeted changes to the genome of cells affected by the disease, resulting in a reduction of symptoms and an improvement in patient outcomes. While the research is still in its early stages, the results are promising and suggest that gene editing may one day be a viable treatment option for [disease]. The team is now working to refine the technique and conduct further studies to confirm the effectiveness of this approach",
-        //                       //           maxLines: null,
-        //                       //           textAlign: TextAlign.left,
-        //                       //           style: TextStyle(
-        //                       //             color: ColorConstant.gray30001,
-        //                       //             fontSize: getFontSize(
-        //                       //               15,
-        //                       //             ),
-        //                       //             fontFamily: 'Poppins',
-        //                       //             fontWeight: FontWeight.w400,
-        //                       //           ),
-        //                       //         ),
-        //                       //       ),
-        //                       //     ],
-        //                       //   ),
-        //                       // ),
-        //                       // CustomImageView(
-        //                       //   imagePath: ImageConstant.imgImage1,
-        //                       //   height: getVerticalSize(
-        //                       //     116.00,
-        //                       //   ),
-        //                       //   width: getHorizontalSize(
-        //                       //     66.00,
-        //                       //   ),
-        //                       //   margin: getMargin(
-        //                       //     left: 19,
-        //                       //   ),
-        //                       // ),
-        //                       // Padding(
-        //                       //   padding: getPadding(
-        //                       //     left: 16,
-        //                       //     top: 8,
-        //                       //     bottom: 8,
-        //                       //   ),
-        //                       //   child: Column(
-        //                       //     mainAxisAlignment:
-        //                       //     MainAxisAlignment.start,
-        //                       //     children: [
-        //                       //       Container(
-        //                       //         width: getHorizontalSize(
-        //                       //           135.00,
-        //                       //         ),
-        //                       //         child: Text(
-        //                       //           "Artificial intelligence helps predict risk of disease",
-        //                       //           maxLines: null,
-        //                       //           textAlign: TextAlign.left,
-        //                       //           style: TextStyle(
-        //                       //             color: ColorConstant.whiteA700,
-        //                       //             fontSize: getFontSize(
-        //                       //               11.579787254333496,
-        //                       //             ),
-        //                       //             fontFamily: 'Poppins',
-        //                       //             fontWeight: FontWeight.w900,
-        //                       //           ),
-        //                       //         ),
-        //                       //       ),
-        //                       //       Container(
-        //                       //         width: getHorizontalSize(
-        //                       //           135.00,
-        //                       //         ),
-        //                       //         margin: getMargin(
-        //                       //           top: 9,
-        //                       //         ),
-        //                       //         child: Text(
-        //                       //           "Researchers at GHI Artificial Intelligence have developed a machine learning algorithm that can accurately predict an individual's risk of developing [disease]. The algorithm, which utilizes data from electronic health records, genetic information, and lifestyle factors, can identify patterns and risk factors that may be missed by traditional methods. The team hopes that this technology will allow healthcare providers to identify individuals at high risk for [disease] and intervene early to prevent the onset of the disease. The algorithm has shown promising results in early tests and the team is now working to bring it to market and make it widely available to healthcare providers.",
-        //                       //           maxLines: null,
-        //                       //           textAlign: TextAlign.left,
-        //                       //           style: TextStyle(
-        //                       //             color: ColorConstant.gray30001,
-        //                       //             fontSize: getFontSize(
-        //                       //               9.925531387329102,
-        //                       //             ),
-        //                       //             fontFamily: 'Poppins',
-        //                       //             fontWeight: FontWeight.w400,
-        //                       //           ),
-        //                       //         ),
-        //                       //       ),
-        //                       //     ],
-        //                       //   ),
-        //                       // ),
-        //                     ],
-        //                   ),
-        //                 ),
-        //               ),
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-        //       Container(
-        //         height: getVerticalSize(
-        //           479.00,
-        //         ),
-        //         width: size.width,
-        //         decoration: BoxDecoration(
-        //           color: ColorConstant.gray90001,
-        //         ),
-        //         child: Stack(
-        //           alignment: Alignment.centerLeft,
-        //           children: [
-        //             CustomImageView(
-        //               imagePath: ImageConstant.imgImagebackground,
-        //               height: getVerticalSize(
-        //                 500,
-        //               ),
-        //               width: getHorizontalSize(
-        //                 311.00,
-        //               ),
-        //               alignment: Alignment.center,
-        //             ),
-        //             Align(
-        //               alignment: Alignment.centerLeft,
-        //               child: Padding(
-        //                 padding: getPadding(
-        //                   left: 10,
-        //                 ),
-        //                 child: Column(
-        //                   mainAxisSize: MainAxisSize.min,
-        //                   mainAxisAlignment:
-        //                       MainAxisAlignment.start,
-        //                   children: [
-        //                     Container(
-        //                       child: Text(
-        //                         AppLocalizations.of(context)!
-        //                             .translate("bitup_home37")!,
-        //                         maxLines: null,
-        //                         textAlign: TextAlign.center,
-        //                         style: TextStyle(
-        //                           color: ColorConstant.whiteA700,
-        //                           fontSize: getFontSize(
-        //                             33.085105895996094,
-        //                           ),
-        //                           fontFamily: 'Poppins',
-        //                           fontWeight: FontWeight.w900,
-        //                         ),
-        //                       ),
-        //                     ),
-        //                     // CustomButton(
-        //                     //   height: 57,
-        //                     //   width: 229,
-        //                     //   text: "Join",
-        //                     //   margin: getMargin(
-        //                     //     top: 44,
-        //                     //   ),
-        //                     // ),
-        //                   ],
-        //                 ),
-        //               ),
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-        //       // CustomBottomBar(
-        //       //   onChanged: (BottomBarEnum type) {},
-        //       // )
-        //     ],
-        //   ),
-        // ),
       ),
     );
   }

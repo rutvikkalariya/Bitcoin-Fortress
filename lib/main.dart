@@ -31,10 +31,10 @@ class MyApp extends StatelessWidget {
         builder: (context, model, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            navigatorObservers: [
-              // FirebaseAnalyticsObserver(analytics: analytics)
-            ],
-            title: 'Bitcoin',
+            // navigatorObservers: [
+            //   // FirebaseAnalyticsObserver(analytics: analytics)
+            // ],
+            title: 'Bitcoin Fortress',
             theme: ThemeData(
               primarySwatch: Colors.blue,
               textTheme: GoogleFonts.openSansTextTheme(),

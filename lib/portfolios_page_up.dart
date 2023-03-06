@@ -251,132 +251,135 @@ class _PortfolioPageState extends State<PortfolioPage>
           ),
           Flexible(
             child: myDataList != null && myDataList.length > 0
-                ? Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: GridView.builder(
-                      itemCount: myDataList.length,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 20,
-                        mainAxisSpacing: 20,
-                      ),
-                      itemBuilder: (BuildContext context, int index) {
-                        return InkWell(
-                          onTap: () {
-                            callCurrencyDetails(myDataList[index].name);
-                          },
-                          child: Container(
-                            // height: MediaQuery.of(context).size.height / 14,
-                            // width: MediaQuery.of(context).size.width / 6,
-                            // // width: 240,
-                            // margin: EdgeInsets.fromLTRB(10, 5, 20, 5),
-                            decoration: BoxDecoration(
-                              boxShadow: kElevationToShadow[0],
-                              // border: Border.all(color: getColorFromHex("#8FD1FE")),
-                              borderRadius: BorderRadius.circular(10),
-                              color: getColorFromHex("#CEEBFF"),
-                            ),
-                            child: Center(
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 10, top: 30),
-                                    child: Row(
-                                      children: [
-                                        InkWell(
-                                          onTap: () {
-                                            if (myDataList.isNotEmpty) {
-                                              showPortfolioDialog(
-                                                  myDataList[index]);
-                                            }
-                                          },
-                                          child: Flexible(
-                                            child: Container(
-                                              height: 45,
-                                              margin: EdgeInsets.fromLTRB(
-                                                  5, 0, 0, 0),
-                                              child: FadeInImage(
-                                                placeholder: AssetImage(
-                                                    'assets/images/plusoval.png'),
-                                                image: NetworkImage(
-                                                    "$ApiUrl/Bitcoin/resources/icons/${myDataList[index].name!.toLowerCase()}.png"),
+                ? Container(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20, right: 20),
+                      child: GridView.builder(
+                        itemCount: myDataList.length,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 20,
+                          mainAxisSpacing: 20,
+                        ),
+                        itemBuilder: (BuildContext context, int index) {
+                          return InkWell(
+                            onTap: () {
+                              callCurrencyDetails(myDataList[index].name);
+                            },
+                            child: Container(
+                              // height: MediaQuery.of(context).size.height / 14,
+                              // width: MediaQuery.of(context).size.width / 6,
+                              // // width: 240,
+                              // margin: EdgeInsets.fromLTRB(10, 5, 20, 5),
+                              decoration: BoxDecoration(
+                                boxShadow: kElevationToShadow[0],
+                                // border: Border.all(color: getColorFromHex("#8FD1FE")),
+                                borderRadius: BorderRadius.circular(10),
+                                color: getColorFromHex("#CEEBFF"),
+                              ),
+                              child: Center(
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10, top: 30),
+                                      child: Row(
+                                        children: [
+                                          InkWell(
+                                            onTap: () {
+                                              if (myDataList.isNotEmpty) {
+                                                showPortfolioDialog(
+                                                    myDataList[index]);
+                                              }
+                                            },
+                                            child: Flexible(
+                                              child: Container(
+                                                height: 45,
+                                                margin: EdgeInsets.fromLTRB(
+                                                    5, 0, 0, 0),
+                                                child: FadeInImage(
+                                                  placeholder: AssetImage(
+                                                      'assets/images/plusoval.png'),
+                                                  image: NetworkImage(
+                                                      "$ApiUrl/Bitcoin/resources/icons/${myDataList[index].name!.toLowerCase()}.png"),
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                        SizedBox(width: 10),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              '${myDataList[index].name}',
-                                              style: GoogleFonts.poppins(
-                                                  textStyle: TextStyle(
-                                                fontWeight: FontWeight.w500,
-                                                fontSize: 19,
-                                                color:
-                                                    getColorFromHex("#4A41F4"),
-                                              )),
-                                            ),
-                                            Text(
-                                              '${double.parse(myDataList[index].rate!.toStringAsFixed(2))}',
-                                              style: GoogleFonts.poppins(
-                                                  textStyle: TextStyle(
-                                                fontWeight: FontWeight.w500,
-                                                fontSize: 16,
-                                                color:
-                                                    getColorFromHex("#4A41F4"),
-                                              )),
-                                            ),
-                                          ],
-                                        ),
+                                          SizedBox(width: 10),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                '${myDataList[index].name}',
+                                                style: GoogleFonts.poppins(
+                                                    textStyle: TextStyle(
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 19,
+                                                  color: getColorFromHex(
+                                                      "#4A41F4"),
+                                                )),
+                                              ),
+                                              Text(
+                                                '${double.parse(myDataList[index].rate!.toStringAsFixed(2))}',
+                                                style: GoogleFonts.poppins(
+                                                    textStyle: TextStyle(
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 16,
+                                                  color: getColorFromHex(
+                                                      "#4A41F4"),
+                                                )),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        double.parse(myDataList[index]
+                                                    .diffRate!) <
+                                                0
+                                            ? Container(
+                                                // color: Colors.red,
+                                                child: Icon(
+                                                  Icons.arrow_downward,
+                                                  color: getColorFromHex(
+                                                      "#FF7C74"),
+                                                  size: 15,
+                                                ),
+                                              )
+                                            : Container(
+                                                // color: Colors.green,
+                                                child: Icon(
+                                                  Icons.arrow_upward_sharp,
+                                                  color: getColorFromHex(
+                                                      "#11CABE"),
+                                                  size: 15,
+                                                ),
+                                              ),
+                                        SizedBox(width: 2),
+                                        Text(myDataList[index].perRate!,
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.normal,
+                                                color: Colors.black)),
                                       ],
                                     ),
-                                  ),
-                                  SizedBox(height: 10),
-                                  Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      double.parse(
-                                                  myDataList[index].diffRate!) <
-                                              0
-                                          ? Container(
-                                              // color: Colors.red,
-                                              child: Icon(
-                                                Icons.arrow_downward,
-                                                color:
-                                                    getColorFromHex("#FF7C74"),
-                                                size: 15,
-                                              ),
-                                            )
-                                          : Container(
-                                              // color: Colors.green,
-                                              child: Icon(
-                                                Icons.arrow_upward_sharp,
-                                                color:
-                                                    getColorFromHex("#11CABE"),
-                                                size: 15,
-                                              ),
-                                            ),
-                                      SizedBox(width: 2),
-                                      Text(myDataList[index].perRate!,
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                              color: Colors.black)),
-                                    ],
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        );
-                      },
+                          );
+                        },
+                      ),
                     ),
                   )
                 : Center(
@@ -679,13 +682,15 @@ class _PortfolioPageState extends State<PortfolioPage>
       sharedPreferences = await SharedPreferences.getInstance();
       setState(() {
         sharedPreferences!.setString("currencyName", bitcoin.name ?? '');
-        sharedPreferences!.setInt("index", 4);
+        sharedPreferences!.setInt("index", 2);
         sharedPreferences!.setString("title",
             AppLocalizations.of(context)!.translate('portfolio').toString());
         sharedPreferences!.commit();
       });
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => PortfolioPage()));
+
+      Navigator.pushNamedAndRemoveUntil(context, '/homePage', (r) => false);
+      // Navigator.push(
+      //     context, MaterialPageRoute(builder: (context) => PortfolioPage()));
     } else {}
   }
 
@@ -699,14 +704,14 @@ class _PortfolioPageState extends State<PortfolioPage>
     sharedPreferences = await SharedPreferences.getInstance();
     setState(() {
       sharedPreferences!.setString("currencyName", name);
-      sharedPreferences!.setInt("index", 1);
+      sharedPreferences!.setInt("index", 3);
       sharedPreferences!.setString(
           "title", AppLocalizations.of(context)!.translate('trends') ?? '');
       sharedPreferences!.commit();
     });
-
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => TrendPage()));
+    Navigator.pushNamedAndRemoveUntil(context, '/homePage', (r) => false);
+    // Navigator.of(context)
+    //     .push(MaterialPageRoute(builder: (context) => TrendPage()));
   }
 
 //callBitcoinApi method for Added coins list---------------------------------------------------------
@@ -941,14 +946,14 @@ class _PortfolioPageState extends State<PortfolioPage>
       sharedPreferences = await SharedPreferences.getInstance();
       setState(() {
         sharedPreferences!.setString("currencyName", bitcoin.name);
-        sharedPreferences!.setInt("index", 3);
+        sharedPreferences!.setInt("index", 2);
         sharedPreferences!.setString("title",
             AppLocalizations.of(context)!.translate('portfolio') ?? '');
         sharedPreferences!.commit();
       });
-      // Navigator.pushNamedAndRemoveUntil(context, '/homePage', (r) => false);
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => PortfolioPage()));
+      Navigator.pushNamedAndRemoveUntil(context, '/homePage', (r) => false);
+      // Navigator.push(
+      //     context, MaterialPageRoute(builder: (context) => PortfolioPage()));
     }
   }
 
@@ -1073,13 +1078,13 @@ class _PortfolioPageState extends State<PortfolioPage>
     print('inserted row id: $id');
     sharedPreferences = await SharedPreferences.getInstance();
     setState(() {
-      sharedPreferences!.setInt("index", 3);
+      sharedPreferences!.setInt("index", 2);
       sharedPreferences!.setString(
-          "title", AppLocalizations.of(context)!.translate('coins') ?? '');
+          "title", AppLocalizations.of(context)!.translate('portfolio') ?? '');
       sharedPreferences!.commit();
     });
-    // Navigator.pushNamedAndRemoveUntil(context, '/homePage', (r) => false);
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => PortfolioPage()));
+    Navigator.pushNamedAndRemoveUntil(context, '/homePage', (r) => false);
+    // Navigator.push(
+    //     context, MaterialPageRoute(builder: (context) => PortfolioPage()));
   }
 }

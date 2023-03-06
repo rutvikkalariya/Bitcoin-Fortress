@@ -63,17 +63,6 @@ class TopLooserGainerState extends State<TopLooserAndGainer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: getColorFromHex("#21232D"),
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   backgroundColor: getColorFromHex("#141418"),
-      //   elevation: 0,
-      //   title: const Text(
-      //     "Top Coins",
-      //     style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
-      //   ),
-      //   centerTitle: true,
-      // ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -606,14 +595,14 @@ class TopLooserGainerState extends State<TopLooserAndGainer> {
     sharedPreferences = await SharedPreferences.getInstance();
     setState(() {
       sharedPreferences!.setString("currencyName", name);
-      sharedPreferences!.setInt("index", 1);
+      sharedPreferences!.setInt("index", 3);
       sharedPreferences!.setString(
           "title", AppLocalizations.of(context)!.translate('trends') ?? '');
       sharedPreferences!.commit();
     });
-
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => TrendPage()));
+    Navigator.pushNamedAndRemoveUntil(context, '/homePage', (r) => false);
+    // Navigator.of(context)
+    //     .push(MaterialPageRoute(builder: (context) => TrendPage()));
   }
 }
 

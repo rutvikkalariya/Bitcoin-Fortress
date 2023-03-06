@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'dart:ui';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:showcaseview/showcaseview.dart';
 import 'home_screen.dart';
 import 'localization/AppLanguage.dart';
 import 'localization/app_localizations.dart';
@@ -386,9 +385,7 @@ class _HomePageState extends State<HomePage> {
       case 1:
         return TopLooserAndGainer();
       case 2:
-        return ShowCaseWidget(
-          builder: Builder(builder: (context) => PortfolioPage()),
-        );
+        return PortfolioPage();
       case 3:
         return TrendPage();
       case 4:
